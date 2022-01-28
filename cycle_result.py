@@ -37,19 +37,12 @@ print("std: %.*f" % (3, np.std(data)))
 
 fig, ax = plt.subplots(constrained_layout=True)
 
-# 设置柱形的间隔
-#width = 0.12  # 柱形的宽度
-#x = np.arange(0, data_1_len*width, width)
 x_index = np.arange(length)
-
-#x_1 = [-30000, length + 30000]
-#y_1 = [1000, 1000]
 
 # 设置左侧Y轴对应的figure
 ax.set_xlabel(f'{length} messages', size=20)
 ax.set_ylabel('Cycle', size=20)
 
-#ax.bar(x, data_1, width)
 ax.scatter(x_index, data, s=5, alpha=0.05)
 #ax.plot(x_1, y_1, color='#FF3935')
 #ax.set_xticklabels(x_index)
