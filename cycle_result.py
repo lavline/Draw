@@ -21,7 +21,7 @@ a3 = 0
 for d in data:
     if d <= 1000:
         a1 += 1
-    elif d<=2000:
+    elif d <= 2000:
         a2 += 1
     else:
         a3 += 1
@@ -39,7 +39,6 @@ fig, ax = plt.subplots(constrained_layout=True)
 
 x_index = np.arange(length)
 
-# 设置左侧Y轴对应的figure
 ax.set_xlabel(f'{length} messages', size=20)
 ax.set_ylabel('Cycle', size=20)
 
@@ -63,7 +62,7 @@ plt.text(1000000, 10000, "0-1k: %.*f%%\n"
                                                  np.min(data),
                                                  3, np.mean(data),
                                                  3, np.std(data)), size=18)
-test_name = "33x257x65x4-(5)"
+test_name = "33x257x65x4-fw1"
 plt.title(test_name, size=20)
 fig.set_size_inches(21, 9)
 plt.show()
